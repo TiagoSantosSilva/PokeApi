@@ -1,0 +1,23 @@
+﻿using System;
+using Newtonsoft.Json;
+
+namespace PokeApi.Models
+{
+    public class Pokemon
+    {
+        [JsonProperty("Id")]
+        public long Id { get; set; }
+
+        [JsonProperty("DexNumber")]
+        public int DexNumber { get; set; }
+
+        [JsonProperty("Name")]
+        public string Name { get; set; }
+
+        [JsonProperty("Height")]
+        public float Height { get; set; }
+
+        [JsonProperty("Weight")]
+        public float Weight { get; set; }
+    }
+}

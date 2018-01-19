@@ -40,41 +40,5 @@ namespace PokeApi.Controllers
             }
             return new ObjectResult(item);
         }
-
-        [HttpPost]
-        public IActionResult Create([FromBody] Status item)
-        {
-            if (item == null)
-            {
-                return BadRequest();
-            }
-
-            _context.Status.Add(item);
-            _context.SaveChanges();
-
-            return CreatedAtRoute("GetStatus", new { id = item.Id }, item);
-        }
-
-        [HttpPut("{id}")]
-        public IActionResult Update(long id, [FromBody] Status item)
-        {
-            if (item == null || item.Id != id)
-            {
-                return BadRequest();
-            }
-
-            var status = _context.Status.FirstOrDefault(t => t.Id == id);
-            if (status == null)
-            {
-                return NotFound();
-            }
-
-            status.Code = item.Code;
-            status.Description = item.Description;
-
-            _context.Status.Update(status);
-            _context.SaveChanges();
-            return CreatedAtRoute("GetStatus", new { id = item.Id }, item);
-        }
     }
 }
