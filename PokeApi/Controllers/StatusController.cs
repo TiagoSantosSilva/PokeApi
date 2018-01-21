@@ -25,9 +25,9 @@ namespace PokeApi.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Status> GetAll()
+        public Status GetAll()
         {
-            return _context.Status.ToList();
+            return new Status { Code = 200, Description = "API is up." };
         }
 
         [HttpGet("{id}", Name = "GetStatus")]
