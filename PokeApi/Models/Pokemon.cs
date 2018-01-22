@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace PokeApi.Models
@@ -19,5 +20,8 @@ namespace PokeApi.Models
 
         [JsonProperty("Weight")]
         public float Weight { get; set; }
+
+        [JsonProperty("Types")]
+        public string Type { get; set; }
     }
 }

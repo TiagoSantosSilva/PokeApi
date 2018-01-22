@@ -23,6 +23,7 @@ namespace PokeApi.Controllers
                 _context.InitializeDatabase();
             }
         }
+
         [HttpGet]
         public IEnumerable<Pokemon> GetAll()
         {
