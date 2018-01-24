@@ -21,7 +21,7 @@ namespace PokeApi.Models
         [JsonProperty("Weight")]
         public float Weight { get; set; }
 
-        [JsonProperty("Types")]
+        [JsonProperty("Type")]
         public string Type { get; set; }
     }
 }
