@@ -25,9 +25,17 @@ namespace PokeApi.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Pokemon> GetAll()
+        public IEnumerable<PokemonDTO> GetAll()
         {
-            return _context.Pokemons.ToList();
+            var pokemons = from p in _context.Pokemons
+                           select new PokemonDTO()
+                           {
+                               Id = p.Id,
+                               Name = p.Name,
+                               DexNumber = p.DexNumber
+                           };
+
+            return pokemons;
         }
 
         [HttpGet("{id}", Name = "GetPokemon")]
