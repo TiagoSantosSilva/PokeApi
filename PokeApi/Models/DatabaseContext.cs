@@ -15,11 +15,11 @@ namespace PokeApi.Models
 
         public void InitializeDatabase() 
         {
-            Types.Add(new PokemonType { Type = "Grass" });
-            Types.Add(new PokemonType { Type = "Poison" });
-            Types.Add(new PokemonType { Type = "Ghost" });
-            Types.Add(new PokemonType { Type = "Grass" });
-            Types.Add(new PokemonType { Type = "Poison" });
+            Types.Add(new PokemonType { Type = "Fire" }); 
+            Types.Add(new PokemonType { Type = "Ghost" }); 
+            Types.Add(new PokemonType { Type = "Grass" }); 
+            Types.Add(new PokemonType { Type = "Poison" }); 
+            Types.Add(new PokemonType { Type = "Rock" }); 
             Types.Add(new PokemonType { Type = "Water" });
 
             Pokemons.Add(new Pokemon
